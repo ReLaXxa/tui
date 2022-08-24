@@ -1,0 +1,64 @@
+---
+openapi: 3.0.1
+info:
+  title: TUI api definition
+  description: some random description
+  version: "0.1"
+servers:
+- url: http://localhost:8080
+paths:
+  /:
+    get:
+      description: A dummy route to check if the app is running
+      responses:
+        "200":
+          description: Returning 200 with message "Hello world!"
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+      - url: http://localhost:8080
+    servers:
+    - url: http://localhost:8080
+  /github_api/fuzzysidasdas:
+    get:
+      description: Looking for a non-existing user
+      responses:
+        "404":
+          description: Returning 404, which is parsed from the GitHub api
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+      - url: http://localhost:8080
+    servers:
+    - url: http://localhost:8080
+  /github_api/fuzzysid:
+    get:
+      description: Request for existing user and his info
+      responses:
+        "200":
+          description: Returning users' repos with their latest commit and SHA
+        "400":
+          description: Returning 400 for missing "Content-Type" header
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+        "406":
+          description: Returning 406 for using wrong "Content-Type" header
+          content:
+            application/xml; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+      - url: http://localhost:8080
+    servers:
+    - url: http://localhost:8080
+components: {}
