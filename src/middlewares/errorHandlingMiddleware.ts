@@ -16,7 +16,6 @@ function handleError(
   next: NextFunction
 ) {
   let customError = err;
-  console.log("we throw error", err);
 
   if (!(err instanceof CustomHttpError)) {
     customError = new CustomHttpError("Internal server error", 500);
