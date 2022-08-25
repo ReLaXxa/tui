@@ -26,7 +26,7 @@ HOSTNAME=https://api.github.com
 GIT_TOKEN=XXX
 ```
  - PORT - the port you want to run your app
- - HOSTNAME - the url for GitHub API [`GitHub REST Api`](https://docs.github.com/en/rest/quickstart)
+ - HOSTNAME - the url for GitHub API [`GitHub REST Api docs`](https://docs.github.com/en/rest/quickstart)
  - GIT_TOKEN - generated personal GitHub access token [`How to generate token`](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
 ## Run locally
